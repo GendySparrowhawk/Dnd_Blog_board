@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS Dnd_post_db;
+
+CREATE DATABASE Dnd_post_db;
