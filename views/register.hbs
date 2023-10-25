@@ -1,0 +1,13 @@
+<form action="/auth/register" method="POST">
+    <h2>Sign the PACT, accept our cookies</h2>
+
+    {{#each errors}}
+    <p class="error text-center">{{this}}</p>
+    {{/each}}
+
+    <input type="text" name='username' placeholder="Username">
+    <input type="text" name="email" id="email" placeholder="Email Address">
+    <input type="text" name="password" id="password" placeholder="password">
+    <input type="text" name="passowrdConfirm" id="passwordConfirm" placeholder="enter your password again">
+    <button>Submit</button>
+</form>

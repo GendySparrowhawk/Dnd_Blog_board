@@ -46,17 +46,16 @@ User.init({
     }
 },
 
-{
-    modelName: 'user',
-    sequelize: db,
-    hooks: {
-        async beforeCreate(user) {
-            user.password = await hash(user.password, 10)
-            return user;
+    {
+        modelName: 'user',
+        sequelize: db,
+        hooks: {
+            async beforeCreate(user) {
+                user.password = await hash(user.password, 10)
+                return user;
+            }
         }
     }
+)
 
-}
-
-
-})
+module.exports = User
